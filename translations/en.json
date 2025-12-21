@@ -100,6 +100,27 @@
     "loading": "Loading...",
     "error": "Error",
     "success": "Success"
+  },
+  "pdf": {
+    "sacredTextNotAvailable": "Sacred text not available yet",
+    "sacredTextNotAvailableDesc": "Sacred text for this chapter is currently not available. You can download and add free Ramayana PDFs!",
+    "freeSources": "Free Ramayana PDF Sources:",
+    "projectGutenberg": "1. Project Gutenberg: Free public domain Ramayana texts",
+    "internetArchive": "2. Internet Archive: Free Ramayana books and PDFs",
+    "sacredTexts": "3. Sacred Texts: Free Ramayana translations",
+    "visit": "Visit",
+    "toAddPdfs": "To add PDFs: Download from above sources and place in public/chapters/ folder as chapter1.pdf, chapter2.pdf, etc.",
+    "backToChapters": "← Back to Chapters",
+    "previous": "← Previous",
+    "next": "Next →",
+    "page": "Page",
+    "download": "📥 Download PDF",
+    "loading": "Loading sacred text...",
+    "pdf": "PDF"
+  },
+  "errors": {
+    "invalidCredentials": "Invalid email or password",
+    "missingFields": "Email and password are required",
+    "serverError": "Server error. Please try again."
   }
 }
-
