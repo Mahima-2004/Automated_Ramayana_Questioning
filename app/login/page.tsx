@@ -39,7 +39,15 @@ export default function LoginPage() {
         localStorage.setItem('user', JSON.stringify(data.user))
         router.push('/dashboard')
       } else {
-        setError(data.message || t('login.error'))
+        if (data.error === 'INVALID_CREDENTIALS') {
+          setError(t('errors.invalidCredentials'))
+        } else if (data.error === 'MISSING_FIELDS') {
+          setError(t('errors.missingFields'))
+        } else if (data.error === 'SERVER_ERROR') {
+          setError(t('errors.serverError'))
+        } else {
+          setError(data.message || t('login.error'))
+        }
       }
     } catch (err) {
       setError(t('register.errorOccurred'))
@@ -79,7 +87,7 @@ export default function LoginPage() {
           <div className="bg-transparent backdrop-blur-none rounded-3xl p-10 border-2 border-gold-500/20 shadow-2xl relative overflow-hidden">
             {/* Shimmer effect */}
             <div className="absolute inset-0 shimmer pointer-events-none"></div>
-            
+
             {/* Decorative corners */}
             <div className="absolute top-0 left-0 w-20 h-20 border-t-4 border-l-4 border-gold-500 rounded-tl-3xl"></div>
             <div className="absolute top-0 right-0 w-20 h-20 border-t-4 border-r-4 border-gold-500 rounded-tr-3xl"></div>
