@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { Document, Page, pdfjs } from 'react-pdf'
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css'
 import 'react-pdf/dist/esm/Page/TextLayer.css'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`
 
@@ -23,6 +24,7 @@ interface PDFInfo {
 }
 
 export default function PDFViewer({ chapterId, pdfUrl, startPage, endPage, multiplePdfs }: PDFViewerProps) {
+  const { t } = useLanguage()
   const [pdfs, setPdfs] = useState<PDFInfo[]>([])
   const [currentPdfIndex, setCurrentPdfIndex] = useState(0)
   const [currentPage, setCurrentPage] = useState(1)
@@ -144,40 +146,40 @@ export default function PDFViewer({ chapterId, pdfUrl, startPage, endPage, multi
           <div className="text-center">
             <div className="text-6xl mb-4">📖</div>
             <h3 className="text-4xl font-cinzel font-bold text-gold-300 mb-4 drop-shadow-2xl">
-              ಪವಿತ್ರ ಪಠ್ಯ ಇನ್ನೂ ಲಭ್ಯವಿಲ್ಲ
+              {t('pdf.sacredTextNotAvailable')}
             </h3>
             <div className="h-1 w-32 bg-gradient-to-r from-transparent via-gold-500 to-transparent mx-auto mb-6"></div>
             <p className="text-white mb-8 drop-shadow-[0_0_10px_rgba(0,0,0,0.9)] drop-shadow-[2px_2px_4px_rgba(0,0,0,0.9)] font-playfair text-lg">
-              ಈ ಅಧ್ಯಾಯಕ್ಕೆ ಪವಿತ್ರ ಪಠ್ಯ ಪ್ರಸ್ತುತ ಲಭ್ಯವಿಲ್ಲ. ನೀವು ಉಚಿತ ರಾಮಾಯಣ PDF ಗಳನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ ಸೇರಿಸಬಹುದು!
+              {t('pdf.sacredTextNotAvailableDesc')}
             </p>
             <div className="bg-transparent backdrop-blur-none rounded-2xl p-8 mb-8 text-left border-2 border-gold-500/20">
               <h4 className="font-cinzel font-bold text-2xl text-gold-300 mb-6 drop-shadow-lg">
-                📚 ಉಚಿತ ರಾಮಾಯಣ PDF ಮೂಲಗಳು:
+                📚 {t('pdf.freeSources')}
               </h4>
               <div className="space-y-3 text-white/90 text-sm">
                 <p className="drop-shadow-md">
-                  <strong>1. Project Gutenberg:</strong> Free public domain Ramayana texts
+                  <strong>{t('pdf.projectGutenberg')}</strong>
                   <br />
                   <a href="https://www.gutenberg.org/ebooks/search/?query=ramayana" target="_blank" rel="noopener noreferrer" className="text-gold-300 underline hover:text-gold-200 font-playfair transition-colors">
-                    Visit Project Gutenberg
+                    {t('pdf.visit')} Project Gutenberg
                   </a>
                 </p>
                 <p className="drop-shadow-md">
-                  <strong>2. Internet Archive:</strong> Free Ramayana books and PDFs
+                  <strong>{t('pdf.internetArchive')}</strong>
                   <br />
                   <a href="https://archive.org/search.php?query=ramayana" target="_blank" rel="noopener noreferrer" className="text-gold-300 underline hover:text-gold-200 font-playfair transition-colors">
-                    Visit Internet Archive
+                    {t('pdf.visit')} Internet Archive
                   </a>
                 </p>
                 <p className="drop-shadow-md">
-                  <strong>3. Sacred Texts:</strong> Free Ramayana translations
+                  <strong>{t('pdf.sacredTexts')}</strong>
                   <br />
                   <a href="https://www.sacred-texts.com/hin/rama/index.htm" target="_blank" rel="noopener noreferrer" className="text-gold-300 underline hover:text-gold-200 font-playfair transition-colors">
-                    Visit Sacred Texts
+                    {t('pdf.visit')} Sacred Texts
                   </a>
                 </p>
                 <p className="mt-4 text-white font-semibold drop-shadow-md">
-                  📥 To add PDFs: Download from above sources and place in <code className="bg-white/20 px-2 py-1 rounded">public/chapters/</code> folder as chapter1.pdf, chapter2.pdf, etc.
+                  📥 {t('pdf.toAddPdfs')}
                 </p>
               </div>
             </div>
@@ -186,7 +188,7 @@ export default function PDFViewer({ chapterId, pdfUrl, startPage, endPage, multi
                 onClick={() => window.location.href = '/dashboard'}
                 className="bg-gradient-to-r from-gold-600 to-saffron-600 hover:from-gold-500 hover:to-saffron-500 text-white font-cinzel font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 border-2 border-gold-400/50"
               >
-                ← ಅಧ್ಯಾಯಗಳಿಗೆ ಹಿಂದಿರುಗಿ
+                {t('pdf.backToChapters')}
               </button>
             </div>
           </div>
@@ -204,11 +206,11 @@ export default function PDFViewer({ chapterId, pdfUrl, startPage, endPage, multi
             disabled={currentPdfIndex === 0 && currentPage <= (startPage || 1)}
             className="bg-gradient-to-r from-gold-600 to-saffron-600 hover:from-gold-500 hover:to-saffron-500 text-white font-cinzel font-bold py-3 px-8 rounded-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-xl hover:shadow-2xl transform hover:scale-105 border-2 border-gold-400/50"
           >
-            ← ಹಿಂದಿನ
+            {t('pdf.previous')}
           </button>
           <div className="bg-transparent backdrop-blur-none px-5 py-3 rounded-lg shadow-lg border-2 border-gold-400/30">
             <span className="text-white font-cinzel font-semibold drop-shadow-[0_0_10px_rgba(0,0,0,0.9)] drop-shadow-[2px_2px_4px_rgba(0,0,0,0.9)] text-lg">
-              ಪುಟ <span className="text-gold-300 font-bold">{getGlobalPageNumber()}</span>
+              {t('pdf.page')} <span className="text-gold-300 font-bold">{getGlobalPageNumber()}</span>
               {totalPages > 0 && (
                 <>
                   {' '}/ <span className="text-gold-300 font-bold">{totalPages}</span>
@@ -216,7 +218,7 @@ export default function PDFViewer({ chapterId, pdfUrl, startPage, endPage, multi
               )}
               {pdfs.length > 1 && (
                 <span className="text-white/80 text-sm ml-2 drop-shadow-[0_0_8px_rgba(0,0,0,0.9)]">
-                  (PDF {currentPdfIndex + 1}/{pdfs.length}, ಪುಟ {currentPage}/{currentPdf?.numPages || 0})
+                  ({t('pdf.pdf')} {currentPdfIndex + 1}/{pdfs.length}, {t('pdf.page')} {currentPage}/{currentPdf?.numPages || 0})
                 </span>
               )}
             </span>
@@ -226,7 +228,7 @@ export default function PDFViewer({ chapterId, pdfUrl, startPage, endPage, multi
             disabled={currentPdfIndex === pdfs.length - 1 && currentPage >= (currentPdf?.endPage || currentPdf?.numPages || 0)}
             className="bg-gradient-to-r from-gold-600 to-saffron-600 hover:from-gold-500 hover:to-saffron-500 text-white font-cinzel font-bold py-3 px-8 rounded-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-xl hover:shadow-2xl transform hover:scale-105 border-2 border-gold-400/50"
           >
-            ಮುಂದಿನ →
+            {t('pdf.next')}
           </button>
         </div>
         <div className="flex gap-2">
@@ -248,7 +250,7 @@ export default function PDFViewer({ chapterId, pdfUrl, startPage, endPage, multi
               download
               className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white font-cinzel font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 border-2 border-green-400/50"
             >
-              📥 PDF ಡೌನ್‌ಲೋಡ್
+              {t('pdf.download')}
             </a>
           )}
         </div>
@@ -258,7 +260,7 @@ export default function PDFViewer({ chapterId, pdfUrl, startPage, endPage, multi
         {loading && (
           <div className="flex flex-col items-center justify-center">
             <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-primary-600 mb-4"></div>
-            <div className="text-xl text-gold-300 font-cinzel font-semibold drop-shadow-lg">ಪವಿತ್ರ ಪಠ್ಯವನ್ನು ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ...</div>
+            <div className="text-xl text-gold-300 font-cinzel font-semibold drop-shadow-lg">{t('pdf.loading')}</div>
           </div>
         )}
         {currentPdf && (
@@ -269,7 +271,7 @@ export default function PDFViewer({ chapterId, pdfUrl, startPage, endPage, multi
             loading={
               <div className="flex flex-col items-center justify-center">
                 <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-primary-600 mb-4"></div>
-                <div className="text-xl text-gold-300 font-cinzel font-semibold drop-shadow-lg">ಪವಿತ್ರ ಪಠ್ಯವನ್ನು ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ...</div>
+                <div className="text-xl text-gold-300 font-cinzel font-semibold drop-shadow-lg">{t('pdf.loading')}</div>
               </div>
             }
             error={null}
@@ -287,3 +289,4 @@ export default function PDFViewer({ chapterId, pdfUrl, startPage, endPage, multi
     </div>
   )
 }
+
