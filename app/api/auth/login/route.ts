@@ -11,7 +11,7 @@ export async function POST(request: NextRequest) {
 
     if (!email || !password) {
       return NextResponse.json(
-        { message: 'ಇಮೇಲ್ ಮತ್ತು ಪಾಸ್‌ವರ್ಡ್ ಅಗತ್ಯವಿದೆ' },
+        { error: 'MISSING_FIELDS', message: 'Email and password are required' },
         { status: 400 }
       )
     }
@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
     const user = findUserByEmail(email)
     if (!user) {
       return NextResponse.json(
-        { message: 'ಅಮಾನ್ಯ ಇಮೇಲ್ ಅಥವಾ ಪಾಸ್‌ವರ್ಡ್' },
+        { error: 'INVALID_CREDENTIALS', message: 'Invalid email or password' },
         { status: 401 }
       )
     }
@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
 
     if (!isValidPassword) {
       return NextResponse.json(
-        { message: 'ಅಮಾನ್ಯ ಇಮೇಲ್ ಅಥವಾ ಪಾಸ್‌ವರ್ಡ್' },
+        { error: 'INVALID_CREDENTIALS', message: 'Invalid email or password' },
         { status: 401 }
       )
     }
@@ -56,7 +56,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('Login error:', error)
     return NextResponse.json(
-      { message: 'ಸರ್ವರ್ ದೋಷ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ' },
+      { error: 'SERVER_ERROR', message: 'Server error. Please try again.' },
       { status: 500 }
     )
   }
