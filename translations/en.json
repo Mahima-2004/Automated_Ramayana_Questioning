@@ -1,0 +1,105 @@
+{
+  "home": {
+    "title": "Ramayana",
+    "subtitle": "The Eternal Epic",
+    "description": "Embark on a divine journey through the timeless tale of Lord Rama",
+    "enterPortal": "Enter Sacred Portal",
+    "startJourney": "Begin Your Journey",
+    "demoAccess": "Demo Access:",
+    "quote": "Where Rama is, there is victory",
+    "quoteTransliteration": "Ramani ddalleye vijayavide"
+  },
+  "dashboard": {
+    "welcome": "Welcome, {name}!",
+    "exploreKandas": "Explore the Sacred Kandas of Ramayana",
+    "exploreFourKandas": "Explore Four Sacred Kandas",
+    "logout": "Logout",
+    "loading": "Loading sacred texts...",
+    "chapter": "Chapter",
+    "pages": "pages",
+    "read": "Read →",
+    "logoutButton": "🪷 Logout"
+  },
+  "login": {
+    "title": "Enter",
+    "subtitle": "Welcome back, seeker of knowledge",
+    "welcomeBack": "Welcome back",
+    "email": "Email Address",
+    "password": "Password",
+    "enterEmail": "Enter your email",
+    "enterPassword": "Enter your password",
+    "enterPortal": "Enter Sacred Portal",
+    "loggingIn": "Logging in...",
+    "noAccount": "Don't have an account?",
+    "startJourney": "Begin your journey",
+    "backToHome": "← Back to Home",
+    "error": "Login failed"
+  },
+  "register": {
+    "title": "Begin",
+    "subtitle": "Start your divine journey today",
+    "startJourney": "Start your divine journey",
+    "fullName": "Full Name",
+    "email": "Email Address",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "enterName": "Enter your name",
+    "enterEmail": "Enter your email",
+    "enterPassword": "Enter your password (minimum 6 characters)",
+    "confirmPasswordPlaceholder": "Confirm your password",
+    "startJourneyButton": "Begin Your Journey",
+    "creating": "Creating...",
+    "hasAccount": "Already have an account?",
+    "enterPortal": "Enter Portal",
+    "backToHome": "← Back to Home",
+    "passwordMismatch": "Passwords do not match",
+    "passwordTooShort": "Password must be at least 6 characters",
+    "registrationFailed": "Registration failed",
+    "errorOccurred": "An error occurred. Please try again."
+  },
+  "chatbot": {
+    "welcome": "Hello! I'm here to answer your questions about Ramayana. You can ask me anything! 🙏",
+    "title": "Ramayana Assistant",
+    "placeholder": "Enter your question...",
+    "openChatbot": "Open Chatbot",
+    "close": "Close",
+    "error": "Sorry, I cannot respond right now. Please try again.",
+    "errorOccurred": "An error occurred. Please try again."
+  },
+  "chapters": {
+    "1": {
+      "title": "Bala Kanda - The Chapter of Childhood",
+      "description": "The birth of Lord Rama and his early years in Ayodhya"
+    },
+    "2": {
+      "title": "Ayodhya Kanda - The Chapter of Ayodhya",
+      "description": "Rama's exile and events in Ayodhya"
+    },
+    "3": {
+      "title": "Aranya Kanda - The Chapter of the Forest",
+      "description": "The forest life of Rama, Sita, and Lakshmana"
+    },
+    "4": {
+      "title": "Kishkindha Kanda - The Chapter of Kishkindha",
+      "description": "Rama meets Hanuman and the monkey kingdom"
+    },
+    "5": {
+      "title": "Sundara Kanda - The Chapter of Sundara",
+      "description": "Hanuman's journey to Lanka and search for Sita"
+    },
+    "6": {
+      "title": "Yuddha Kanda - The Chapter of War",
+      "description": "The war with Ravana and Rama's victory"
+    },
+    "7": {
+      "title": "Uttara Kanda - The Final Chapter",
+      "description": "Rama's return to Ayodhya and final events"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success"
+  }
+}
+

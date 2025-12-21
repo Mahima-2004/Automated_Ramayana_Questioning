@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&family=Cinzel:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  font-family: 'Playfair Display', 'Noto Sans Kannada', serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .font-kannada {
+    font-family: 'Noto Sans Kannada', sans-serif;
+  }
+  
+  .font-devanagari {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+}
+
+  .font-cinzel {
+    font-family: 'Cinzel', serif;
+  }
+  
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .text-gold {
+    color: #d4af37;
+  }
+  
+  .bg-gold {
+    background-color: #d4af37;
+  }
+  
+  .border-gold {
+    border-color: #d4af37;
+}
+
+  .ornate-border {
+    border: 3px solid #d4af37;
+    border-radius: 20px;
+    box-shadow: 
+      0 0 20px rgba(212, 175, 55, 0.3),
+      inset 0 0 20px rgba(212, 175, 55, 0.1);
+}
+
+  .epic-glow {
+    box-shadow: 
+      0 0 30px rgba(212, 175, 55, 0.5),
+      0 0 60px rgba(212, 175, 55, 0.3),
+      0 0 90px rgba(212, 175, 55, 0.1);
+  }
+  
+  .saffron-gradient {
+    background: linear-gradient(135deg, #ff9933 0%, #ff6600 50%, #cc3300 100%);
+}
+
+  .gold-gradient {
+    background: linear-gradient(135deg, #ffd700 0%, #ffb347 50%, #d4af37 100%);
+}
+
+  .royal-gradient {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
+}
+
+  .pattern-overlay {
+    background-image: 
+      repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(212, 175, 55, 0.03) 10px, rgba(212, 175, 55, 0.03) 20px);
+  }
+  
+  .floating {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0px);
+  }
+  50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 3s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+  }
+}
+}
