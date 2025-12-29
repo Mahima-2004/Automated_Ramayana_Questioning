@@ -10,15 +10,22 @@ export const metadata: Metadata = {
   description: 'Learn Ramayana through interactive chapters and automated questioning',
 }
 
+import Footer from '@/components/Footer'
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <LanguageProvider>{children}</LanguageProvider>
+    <html lang="en" className="h-full">
+      <body className={`${inter.className} min-h-screen flex flex-col`}>
+        <LanguageProvider>
+          <div className="flex-grow">
+            {children}
+          </div>
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   )
