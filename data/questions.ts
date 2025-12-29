@@ -841,7 +841,92 @@ export const questions: Record<string, Record<number, Question[]>> = {
         correctAnswer: 'Tataka',
       },
     ],
-    // More chapters to be added...
+    2: [
+      {
+        question: 'Why did Rama go to the forest?',
+        options: ['Kaikeyi\'s boon', 'His own wish', 'Dasharatha\'s order', 'Curse'],
+        correctAnswer: 'Kaikeyi\'s boon',
+      },
+      {
+        question: 'How many years was the exile?',
+        options: ['10 years', '12 years', '14 years', '16 years'],
+        correctAnswer: '14 years',
+      },
+      {
+        question: 'Who accompanied Rama?',
+        options: ['Sita and Lakshmana', 'Bharata and Shatrughna', 'Only Sita', 'Only Lakshmana'],
+        correctAnswer: 'Sita and Lakshmana',
+      },
+      {
+        question: 'Why did Dasharatha die?',
+        options: ['Separation from Rama', 'Old age', 'War', 'Disease'],
+        correctAnswer: 'Separation from Rama',
+      },
+      {
+        question: 'Who ruled Ayodhya in Rama\'s absence?',
+        options: ['Bharata (with Padukas)', 'Lakshmana', 'Shatrughna', 'Vasistha'],
+        correctAnswer: 'Bharata (with Padukas)',
+      },
+      {
+        question: 'Who met Rama at the Ganges?',
+        options: ['Guha', 'Sugriva', 'Hanuman', 'Vibhishana'],
+        correctAnswer: 'Guha',
+      },
+    ],
+    3: [
+      {
+        question: 'Who kidnapped Sita?',
+        options: ['Ravana', 'Kumbhakarna', 'Indrajit', 'Vibhishana'],
+        correctAnswer: 'Ravana',
+      },
+      {
+        question: 'Who was the golden deer?',
+        options: ['Maricha', 'Subahu', 'Tataka', 'Kabandha'],
+        correctAnswer: 'Maricha',
+      },
+      {
+        question: 'Which bird tried to save Sita?',
+        options: ['Jatayu', 'Garuda', 'Sampati', 'Hamsa'],
+        correctAnswer: 'Jatayu',
+      },
+      {
+        question: 'Whom did Rama meet in the forest (devotee)?',
+        options: ['Shabari', 'Ahalya', 'Tara', 'Mandodari'],
+        correctAnswer: 'Shabari',
+      },
+      {
+        question: 'Who was the demoness who proposed to Rama?',
+        options: ['Shurpanakha', 'Tataka', 'Mandodari', 'Lankini'],
+        correctAnswer: 'Shurpanakha',
+      },
+    ],
+    4: [
+      {
+        question: 'Who was the King of Kishkindha?',
+        options: ['Vali', 'Sugriva', 'Hanuman', 'Angada'],
+        correctAnswer: 'Vali',
+      },
+      {
+        question: 'Who helped Rama find Sita?',
+        options: ['Hanuman and Sugriva', 'Vali', 'Ravana', 'Indrajit'],
+        correctAnswer: 'Hanuman and Sugriva',
+      },
+      {
+        question: 'Who is Hanuman\'s father?',
+        options: ['Vayu', 'Indra', 'Surya', 'Varuna'],
+        correctAnswer: 'Vayu',
+      },
+      {
+        question: 'Whom did Rama assist to become King?',
+        options: ['Sugriva', 'Vali', 'Angada', 'Nala'],
+        correctAnswer: 'Sugriva',
+      },
+      {
+        question: 'Where did Rama meet Hanuman?',
+        options: ['Rishyamukha Parvata', 'Pampa Sarovar', 'Ayodhya', 'Lanka'],
+        correctAnswer: 'Rishyamukha Parvata',
+      },
+    ],
   },
 
   // Sanskrit (Sample Questions)
@@ -873,6 +958,71 @@ export const questions: Record<string, Record<number, Question[]>> = {
         correctAnswer: 'ताटका',
       },
     ],
-    // More chapters to be added...
+    2: [
+      {
+        question: 'रामः किमर्थं वनं गतवान्?',
+        options: ['कैकेय्याः वरदानेन', 'स्वइच्छया', 'दशरथस्य आज्ञया', 'शापेन'],
+        correctAnswer: 'कैकेय्याः वरदानेन',
+      },
+      {
+        question: 'वनवासः कति वर्षाणि आसीत्?',
+        options: ['दश', 'द्वादश', 'चतुर्दश', 'षोडश'],
+        correctAnswer: 'चतुर्दश',
+      },
+      {
+        question: 'रामस्य सह कः गतवान्?',
+        options: ['सीता लक्ष्मणः च', 'भरत शत्रुघ्नः च', 'केवला सीता', 'केवलः लक्ष्मणः'],
+        correctAnswer: 'सीता लक्ष्मणः च',
+      },
+      {
+        question: 'दशरथस्य मृत्युः कथं अभवत्?',
+        options: ['पुत्रवियोगेन', 'युद्धेन', 'रोगेन', 'वृद्धाप्येन'],
+        correctAnswer: 'पुत्रवियोगेन',
+      },
+    ],
+    3: [
+      {
+        question: 'सीताम् कः अपहृतवान्?',
+        options: ['रावणः', 'कुम्भकर्णः', 'इन्द्रजित्', 'विभीषणः'],
+        correctAnswer: 'रावणः',
+      },
+      {
+        question: 'स्वर्णमृगः कः आसीत्?',
+        options: ['मारीचः', 'सुबाहुः', 'ताटका', 'कबन्धः'],
+        correctAnswer: 'मारीचः',
+      },
+      {
+        question: 'सीतायाः रक्षणार्थं कः पक्षी युद्धं कृतवान्?',
+        options: ['जटायुः', 'गरुडः', 'सम्पातिः', 'हंसः'],
+        correctAnswer: 'जटायुः',
+      },
+      {
+        question: 'शबरी कस्य भक्ता आसीत्?',
+        options: ['रामस्य', 'शिवस्य', 'कृष्णस्य', 'दुर्गायाः'],
+        correctAnswer: 'रामस्य',
+      },
+    ],
+    4: [
+      {
+        question: 'किष्किन्धायाः राजा कः आसीत्?',
+        options: ['वाली', 'सुग्रीवः', 'हनुमान्', 'अङ्गदः'],
+        correctAnswer: 'वाली',
+      },
+      {
+        question: 'रामः कस्य साहाय्यं कृतवान्?',
+        options: ['सुग्रीवस्य', 'वालिनः', 'अङ्गदस्य', 'नलस्य'],
+        correctAnswer: 'सुग्रीवस्य',
+      },
+      {
+        question: 'हनुमतः पिता कः?',
+        options: ['वायुः', 'इन्द्रः', 'सूर्यः', 'वरुणः'],
+        correctAnswer: 'वायुः',
+      },
+      {
+        question: 'हनुमान् रामं कुत्र अमिलत्?',
+        options: ['ऋष्यमुखपर्वते', 'पम्पासरोवरे', 'अयोध्यायाम्', 'लङ्कायाम्'],
+        correctAnswer: 'ऋष्यमुखपर्वते',
+      },
+    ],
   },
 }
