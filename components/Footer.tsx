@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function Footer() {
     return (
-        <footer className="w-full bg-gradient-to-r from-gray-900 to-black border-t-2 border-gold-500/30 py-8 mt-auto">
+        <footer className="w-full bg-gradient-to-r from-gray-900 to-black border-t-2 border-gold-500/30 py-8 mt-auto relative z-50">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-6">
 
@@ -22,7 +22,7 @@ export default function Footer() {
                                 RV College of Engineering
                             </h3>
                             <p className="text-gold-400/80 text-sm font-playfair italic">
-                                Department of Computer Science
+                                Department of Electronics and Communication Engineering
                             </p>
                         </div>
                     </div>
@@ -35,7 +35,7 @@ export default function Footer() {
                         <ul className="text-gray-300 font-playfair text-right space-y-1">
                             <li className="hover:text-gold-200 transition-colors">Mahima Gowda RG</li>
                             <li className="hover:text-gold-200 transition-colors">Manish R Shetty</li>
-                            <li className="hover:text-gold-200 transition-colors">Rohini Hallikar</li>
+                            <li className="hover:text-gold-200 transition-colors">Dr. Rohini Hallikar</li>
                         </ul>
                     </div>
 
